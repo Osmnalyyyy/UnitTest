@@ -14,12 +14,12 @@ public class Day02Test05_GroupingTest {
             // test etmek için yazdığım 2 test methodunu @Nested annotation ile grupluyoruz
     class  MultiplyTest{
         @ParameterizedTest
-        @CsvSource(value = {"-12,-4,3","-12,4,-3","12,-4,-3"})//x=y+z  yaptık
+        @CsvSource(value = {"-12,-4,3","-12,4,-3","12,-4,-3"})//x=y*z  yaptık
         void testMultiplyWithNonZero(int x,int y, int z){
             assertEquals(x,Math.multiplyExact(y,z));
         }
         @ParameterizedTest
-        @CsvSource(value = {"0,-4,0","0,4,0","0,0,4"})//x=y+z  yaptık
+        @CsvSource(value = {"0,-4,0","0,4,0","0,0,4"})//x=y*z  yaptık
         void testMultiplyWithZero(int x,int y, int z){
             assertEquals(x,Math.multiplyExact(y,z));
         }
@@ -31,13 +31,13 @@ public class Day02Test05_GroupingTest {
             // test etmek için yazdığım 2 test methodunu @Nested annotation ile grupluyoruz
     class AddTest{
         @ParameterizedTest
-        @CsvSource(value = {"-1,-4,3", "1,4,-3", "-7,-4,-3"})//x=y*z  yaptık
+        @CsvSource(value = {"-1,-4,3", "1,4,-3", "-7,-4,-3"})//x=y+z  yaptık
         void testAddWithNonZero(int x,int y,int z){
             assertEquals(x,Math.addExact(y,z));
         }
 
         @ParameterizedTest
-        @CsvSource(value ={ "9,0,9", "2,2,0", "4,4,0"})//x=y*z  yaptık
+        @CsvSource(value ={ "9,0,9", "2,2,0", "4,4,0"})//x=y+z  yaptık
         void testAddWithZero(int x,int y,int z){
             assertEquals(x,Math.addExact(y,z));
         }
