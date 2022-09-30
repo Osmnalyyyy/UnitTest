@@ -1,13 +1,15 @@
 package Day3;
 
 public class C05_Mock_Islemler {
-    public void ekleOgrenci(String ogrenciAdi){
+    public void ekleOgrenci(String ogrenciAdi) {
         System.out.println("Ogrenci eklendi");
     }
-    public void silOgrenci(String ogrenciAdi){
+
+    public void silOgrenci(String ogrenciAdi) {
         System.out.println("Ogrenci silindi");
     }
-    public void guncelleOgrenci(String ogrenciAdi){
+
+    public void guncelleOgrenci(String ogrenciAdi) {
         System.out.println("Ogrenci bilgileri guncellendi");
     }
 }
